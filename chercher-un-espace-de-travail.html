@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-106BFKYRP2"></script>
+<script> // Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-106BFKYRP2');
+</script>
+
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNe-pCNCXDyfLCvVolNPC0pgd3WuXXys&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+
+<title>Disponibilit&eacute;s </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="icon" href="favicon.ico" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<meta name="author" content="Pierre-Louis Schnitzler">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+
+<!-- Landing page -->
+
+<body>
+
+<div id="map"></div>
+
+</body>
+
+<script>
+
+
+
+</script>
+
+<script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const paris = { lat: 48.85, lng: 2.35 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 11,
+          center: paris,
+        });
+
+        //https://stackoverflow.com/questions/49925355/display-json-from-url-specific-info-into-html
+        //https://scottcents.medium.com/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6
+        var url = "https://spreadsheets.google.com/feeds/list/1xTvtHZAd3g9HRhsXtWuplV41rqoA0sR-s1zDx0yFkPs/oxz78uc/public/values?alt=json";
+
+		$.ajax({
+		  method: "GET",
+		  cache: false,
+		  url: url,
+		  success: function(data) {
+		  	var array = data.feed.entry;
+		  	
+		  	for (let i = 0; i < array.length; i++) {
+	    		
+        		var latitude = parseFloat(array[i].gsx$latitude.$t);
+        		var longitude = parseFloat(array[i].gsx$longitude.$t);
+
+        		const contentString = "<div style='margin:3px'><center><p>Prix à la journée : "+array[i].gsx$tarif.$t+"€</p><a href = 'reserver-un-espace-de-travail.html'>Réserver</a></center></div>"
+        		const infowindow = new google.maps.InfoWindow({content: contentString,});
+
+        		// The marker, positioned at Uluru
+		        const marker = new google.maps.Marker({
+		          position: { lat: latitude, lng: longitude},
+		          map: map,
+		        });
+		        marker.addListener("click", () => {
+				    infowindow.open(map, marker);
+				});
+	    		
+			}
+		  },
+		  error: function(error) {
+		    //What do you want to do with the error?
+		  },
+		});
+
+        
+      }
+    </script>
+
+
+<style> /*https://stackoverflow.com/questions/17067196/google-maps-api-full-screen*/
+html, body{
+    height: 100%;
+    width: 100%;
+}
+/* Set the size of the div element that contains the map */
+#map {
+  height: 100%;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+</style>
+
