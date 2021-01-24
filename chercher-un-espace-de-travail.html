@@ -12,7 +12,6 @@
   gtag('config', 'G-106BFKYRP2');
 </script>
 
-
 <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNe-pCNCXDyfLCvVolNPC0pgd3WuXXys&callback=initMap&libraries=&v=weekly"
       defer
@@ -70,7 +69,7 @@
         		var latitude = parseFloat(array[i].gsx$latitude.$t);
         		var longitude = parseFloat(array[i].gsx$longitude.$t);
 
-        		const contentString = "<div style='margin:3px'><center><p>Prix à la journée : "+array[i].gsx$tarif.$t+"€</p><a href = 'reserver-un-espace-de-travail.html'>Réserver</a></center></div>"
+        		const contentString = "<div style='margin:3px'><center><p>Prix à la journée : "+array[i].gsx$tarif.$t+"€</p><a href = 'reserver-un-espace-de-travail.html' target='_blank' rel='noopener noreferrer'>Réserver</a></center></div>"
         		const infowindow = new google.maps.InfoWindow({content: contentString,});
 
         		// The marker, positioned at Uluru
