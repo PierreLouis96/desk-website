@@ -1,46 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-106BFKYRP2"></script>
-<script> // Google Analytics
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-106BFKYRP2"></script>
+  <script> // Google Analytics
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-106BFKYRP2');
-</script>
+    gtag('config', 'G-106BFKYRP2');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Pierre-Louis Schnitzler">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rechercher un espace de travail</title>
+  <!-- Favicon -->
+  <link rel="icon" href="image/favicon.ico" />
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="./plugins/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./plugins/meanmenu/meanmenu.css">
+  <link rel="stylesheet" href="./plugins/slick-1.8.1/slick.css">
+  <link rel="stylesheet" href="./plugins/fancybox-master/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./plugins/aos-animation/aos.css">
+  <!-- fonts -->
+  <link rel="stylesheet" href="./fonts/ep-icon-fonts/css/style.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-5/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./css/settings.css">
+  <link rel="stylesheet" href="./css/style.css">
 
 <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNe-pCNCXDyfLCvVolNPC0pgd3WuXXys&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa6SiG7JQxa5SWjCZ3OX87HvqUsJBwpgA&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
 
-<title>Disponibilit&eacute;s </title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-	<link rel="icon" href="favicon.ico" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-	<meta name="author" content="Pierre-Louis Schnitzler">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
+</head>
 
 
 <!-- Landing page -->
 
 <body>
 
-<div id="map"></div>
+<div class="site-wrapper">
+<!-- Header Starts -->
+  <header class="site-header position-relative">
+        <div class="container">
+            <div class="row justify-content-center align-items-center position-relative">
+                <div class="col-sm-3 col-6 col-lg-2 col-xl-2 order-lg-1">
+                  <!-- Brand Logo -->
+                    <div class="brand-logo">
+                        <a href="index.html"><img src="image/main-logo.svg" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-lg-2 col-xl-2 d-none d-sm-block order-lg-3">
+                    <div class="header-btns justify-content-end">
+                        <a href="#" class="btn btn-link">Sign in</a>
+                    </div>
+                </div>
+                <!-- Menu Block -->
+                <div class="col-sm-1 col-6 col-lg-6 col-xl-6 offset-lg-2  position-static order-lg-2">
+                    <div class="main-navigation">
+                        <ul class="main-menu">
+                            <li class="menu-item has-dropdown">
+                                <a href="#features">Offre</a>
+                                    <ul class="menu-dropdown">
+                                        <li class="single-item">
+                                            <a href="chercher-un-espace-de-travail.html">
+                                            <h3>Télétravailleur</h3> 
+                                            <p>Trouvez un espace de travail</p>
+                                            </a>
+                                        </li>
+                                        <li class="single-item">
+                                            <a href="devenir-hote.html">
+                                                <h3>Hôte</h3>
+                                                <p>Accueillez des télétravailleurs</p>
+                                            </a> 
+                                        </li>
+                                    </ul>
+                                </li>
+                            <li class="menu-item "><a href="#features">Equipe</a></li>
+                    
+                            <li class="menu-item"><a href="#">Contact</a></li>
+                            </ul>
+                    </div>
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+        
+  </header>
+  
+  <div id="map" style="height:90vh;margin-top:1vw;"></div>
 
-</body>
+</div>
 
-<script>
+<!-- Vendor JS-->
+<script src="./plugins/jquery/jquery.min.js"></script>
+<script src="./plugins/jquery/jquery-migrate.min.js"></script>
+<script src="./plugins/bootstrap-4.3.1/js/bootstrap.bundle.js"></script>
 
+<!-- Plugins JS -->
+<script src="./plugins/meanmenu/jquery.meanmenu.js"></script>
+<script src="./plugins/slick-1.8.1/slick.min.js"></script>
+<script src="./plugins/fancybox-master/jquery.fancybox.min.js"></script>
+<script src="./plugins/aos-animation/aos.js"></script>
 
-
-</script>
+<!-- Custom JS -->
+<script src="./js/active.js"></script>
 
 <script>
       // Initialize and add the map
@@ -57,53 +127,42 @@
         //https://scottcents.medium.com/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6
         var url = "https://spreadsheets.google.com/feeds/list/1xTvtHZAd3g9HRhsXtWuplV41rqoA0sR-s1zDx0yFkPs/oxz78uc/public/values?alt=json";
 
-		$.ajax({
-		  method: "GET",
-		  cache: false,
-		  url: url,
-		  success: function(data) {
-		  	var array = data.feed.entry;
-		  	
-		  	for (let i = 0; i < array.length; i++) {
-	    		
-        		var latitude = parseFloat(array[i].gsx$latitude.$t);
-        		var longitude = parseFloat(array[i].gsx$longitude.$t);
+    $.ajax({
+      method: "GET",
+      cache: false,
+      url: url,
+      success: function(data) {
+        var array = data.feed.entry;
+        
+        for (let i = 0; i < array.length; i++) {
+          
+            var latitude = parseFloat(array[i].gsx$latitude.$t);
+            var longitude = parseFloat(array[i].gsx$longitude.$t);
 
-        		const contentString = "<div style='margin:3px'><center><p>Prix à la journée : "+array[i].gsx$tarif.$t+"€</p><a href = 'reserver-un-espace-de-travail.html' target='_blank' rel='noopener noreferrer'>Réserver</a></center></div>"
-        		const infowindow = new google.maps.InfoWindow({content: contentString,});
+            const contentString = "<div style='margin:3px'><center><p>Prix à la journée : "+array[i].gsx$tarif.$t+"€</p><a href = 'reserver-un-espace-de-travail.html' target='_blank' rel='noopener noreferrer'>Réserver</a></center></div>"
+            const infowindow = new google.maps.InfoWindow({content: contentString,});
 
-        		// The marker, positioned at Uluru
-		        const marker = new google.maps.Marker({
-		          position: { lat: latitude, lng: longitude},
-		          map: map,
-		        });
-		        marker.addListener("click", () => {
-				    infowindow.open(map, marker);
-				});
-	    		
-			}
-		  },
-		  error: function(error) {
-		    //What do you want to do with the error?
-		  },
-		});
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+              position: { lat: latitude, lng: longitude},
+              map: map,
+            });
+            marker.addListener("click", () => {
+            infowindow.open(map, marker);
+        });
+          
+      }
+      },
+      error: function(error) {
+        //What do you want to do with the error?
+      },
+    });
 
         
       }
     </script>
 
+</body>
 
-<style> /*https://stackoverflow.com/questions/17067196/google-maps-api-full-screen*/
-html, body{
-    height: 100%;
-    width: 100%;
-}
-/* Set the size of the div element that contains the map */
-#map {
-  height: 100%;
-  /* The height is 400 pixels */
-  width: 100%;
-  /* The width is the width of the web page */
-}
-</style>
+</html>
 
