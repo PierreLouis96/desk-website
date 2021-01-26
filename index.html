@@ -10,7 +10,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-106BFKYRP2');
+    gtag('config', 'G-106BFKYRP2', { 'anonymize_ip': true });
   </script>
 
   <meta charset="UTF-8">
@@ -628,6 +628,21 @@
 
   <!-- Custom JS -->
   <script src="./js/active.js"></script>
+
+  <!-- Axeptio-->
+  <script>
+  window.axeptioSettings = {
+    clientId: "6010538c4b0e005e71e41576",
+    cookiesVersion: "ga_only",
+  };
+   
+  (function(d, s) {
+    var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+    e.async = true; e.src = "//static.axept.io/sdk.js";
+    t.parentNode.insertBefore(e, t);
+  })(document, "script");
+  </script>
+
 </body>
 
 </html>
