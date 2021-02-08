@@ -22866,7 +22866,7 @@
        faq
 ///////////////////////////////*/
 .faq-section {
-  background-color: #283730;
+  background-color: #0f4c82;
   width: 100%;
   padding-top: 70px;
   padding-bottom: 150px;
@@ -22994,7 +22994,7 @@
           box-shadow: 0 2px 4px rgba(37, 41, 39, 0.03);
   box-shadow: 0 2px 4px rgba(37, 41, 39, 0.03);
   border-radius: 10px;
-  background-color: #384e44;
+  background-color: #19568c;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
@@ -23048,8 +23048,8 @@
 
 .single-faq .faq-head.collapsed {
   background: #fff;
-  border-color: #20342b;
-  background-color: #384e44;
+  border-color: #0d497c;
+  background-color: #366fa0;
   color: #fff;
 }
 
