@@ -146,6 +146,7 @@
             const marker = new google.maps.Marker({
               position: { lat: latitude, lng: longitude},
               map: map,
+              icon: "image/icon_location.svg"
             });
             marker.addListener("click", () => {
             infowindow.open(map, marker);
