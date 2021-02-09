@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="./css/style.css">
 
 <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNe-pCNCXDyfLCvVolNPC0pgd3WuXXys&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG13mlqZahjna8oNgHzYi9QPOev_mONic&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
 
@@ -146,6 +146,7 @@
             const marker = new google.maps.Marker({
               position: { lat: latitude, lng: longitude},
               map: map,
+              icon:{url:"image/marker.svg", size: new google.maps.Size(20, 35),scaledSize: new google.maps.Size(20,35), anchor: new google.maps.Point(10, 35)}
             });
             marker.addListener("click", () => {
             infowindow.open(map, marker);
