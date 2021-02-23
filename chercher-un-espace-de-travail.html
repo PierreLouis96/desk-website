@@ -22,15 +22,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Rechercher un espace de travail</title>
   <meta content="Découvrez des espaces de travail flexibles et inspirants à proximité de votre domicile. Open spaces et bureaux fermés. Wifi de qualité." name="description">
-  <meta content="Rechercher un espace de travail" property="og:title">
-  <meta content="Découvrez des espaces de travail flexibles et inspirants à proximité de votre domicile. Open spaces et bureaux fermés. Wifi de qualité." property="og:description">
-  <meta content="image/bureau.png" property="og:image">
+
+  <meta property="og:title" content="Rechercher un espace de travail">
+  <meta property="og:description" content="Découvrez des espaces de travail flexibles et inspirants à proximité de votre domicile. Open spaces et bureaux fermés. Wifi de qualité.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="image/bureau.png">
+  <meta property="og:image:alt" content="bureau télétravail">
+  <meta property="og:locale" content="fr">
+  <meta property="og:url" content="https://www.desk.community">
+
   <meta content="Rechercher un espace de travail" property="twitter:title">
   <meta content="Découvrez des espaces de travail flexibles et inspirants à proximité de votre domicile. Open spaces et bureaux fermés. Wifi de qualité." property="twitter:description">
   <meta content="image/bureau.png" property="twitter:image">
-  <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
 
+  <!-- URL canonique -->
+  <link rel="canonical" href="http://desk.community/chercher-un-espace-de-travail">
   <!-- Favicon -->
   <link rel="icon" href="image/favicon.ico" />
   <!-- Plugins CSS -->
@@ -67,7 +74,7 @@
                 <div class="col-sm-3 col-6 col-lg-2 col-xl-2 order-lg-1">
                   <!-- Brand Logo -->
                     <div class="brand-logo">
-                        <a href="index.html"><img src="image/main-logo.svg" alt="" /></a>
+                        <a href="https://desk.community"><img src="image/main-logo.svg" alt="" /></a>
                     </div>
                 </div>
                 <div class="col-sm-8 col-lg-2 col-xl-2 d-none d-sm-block order-lg-3">
@@ -83,13 +90,13 @@
                                 <a href="#features">Service</a>
                                     <ul class="menu-dropdown">
                                         <li class="single-item">
-                                            <a href="chercher-un-espace-de-travail.html" target='_blank' rel='noopener noreferrer'>
+                                            <a href="https://desk.community/chercher-un-espace-de-travail" target='_blank' rel='noopener noreferrer'>
                                             <h3>Télétravailleur</h3> 
                                             <p>Trouvez un espace de travail</p>
                                             </a>
                                         </li>
                                         <li class="single-item">
-                                            <a href="devenir-hote.html" target='_blank' rel='noopener noreferrer'>
+                                            <a href="https://desk.community/devenir-hote" target='_blank' rel='noopener noreferrer'>
                                                 <h3>Hôte</h3>
                                                 <p>Accueillez des télétravailleurs</p>
                                             </a> 
@@ -176,7 +183,7 @@
             var latitude = parseFloat(array[i].gsx$latitude.$t);
             var longitude = parseFloat(array[i].gsx$longitude.$t);
 
-            const contentString = "<div style='margin:3px'><center><p>Prix à la journée : "+array[i].gsx$tarif.$t+"€</p><a href = 'reserver-un-espace-de-travail.html' target='_blank' rel='noopener noreferrer'>Réserver</a></center></div>"
+            const contentString = "<div style='margin:3px'><center><p>Prix à la journée : "+array[i].gsx$tarif.$t+"€</p><a href = 'https://desk.community/reserver-un-espace-de-travail' target='_blank' rel='noopener noreferrer'>Réserver</a></center></div>"
             const infowindow = new google.maps.InfoWindow({content: contentString,});
 
             // The marker, positioned at Uluru
