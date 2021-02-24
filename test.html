@@ -1,12 +1,15 @@
 <html lang="en">
+
   <head>
     <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="230232951796-ffoa0rg754k1i44j0dvijbvvfm457fu4.apps.googleusercontent.com.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="230232951796-ffoa0rg754k1i44j0dvijbvvfm457fu4.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <a href="#" onclick="signOut();">Sign out</a>
   </body>
+
   <script>
     function onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
@@ -16,4 +19,14 @@
       console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     }
   </script>
+
+  <script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+  </script>
+
 </html>
